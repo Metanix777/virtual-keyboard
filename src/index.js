@@ -52,6 +52,10 @@ document.addEventListener("keydown", (e) => {
       el.classList.add("keydown");
       if (el.dataset.printable === "true") {
         textarea.textContent = textarea.textContent + e.key;
+      } else {
+        if (el.dataset.code === "ShiftLeft") {
+          shiftPress();
+        }
       }
     }
   });
@@ -61,6 +65,33 @@ document.addEventListener("keyup", (e) => {
   getKeyCode.forEach((el) => {
     if (e.code === el.dataset.code) {
       el.classList.remove("keydown");
+      if (el.dataset.code === "ShiftLeft") {
+        shiftPress();
+      }
     }
   });
 });
+
+let toggleShift = 0;
+function shiftPress() {
+  toggleShift = toggleShift ? 0 : 1;
+  getKeyCode.forEach((el) => {
+    if (el.dataset.printable === "true") {
+      el.innerHTML = keys[el.dataset.code].eng[toggleShift];
+    }
+  });
+}
+
+const keys = {};
+function transformkeysArr() {
+  keysArr.forEach((line) => {
+    line.forEach((el) => {
+      keys[el.code] = {
+        eng: el.eng,
+        ru: el.ru,
+        printable: el.printable,
+      };
+    });
+  });
+}
+transformkeysArr();
