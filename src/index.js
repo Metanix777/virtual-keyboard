@@ -4,7 +4,7 @@ function createMarkup() {
   document.body.innerHTML = `
         <main class='main'>
             <section class='entry-field'>
-                <textarea name="entry-field__input" id="entry-field__input" cols="30" rows="10"></textarea>
+                <textarea name="entry-field__input" id="entry-field__input" cols="100" rows="10"></textarea>
             </section>
             <section class='keyboard'></section>
         </main>
@@ -20,7 +20,9 @@ function createKeyboard() {
 
     el.forEach((item) => {
       const element = document.createElement("div");
-      element.className = "keyboard__item";
+      element.className = item.styleClass
+        ? `keyboard__item ${item.styleClass}`
+        : "keyboard__item";
       element.innerHTML = item.eng[0];
       line.append(element);
     });

@@ -67,8 +67,9 @@ const keysArr = [
     },
     {
       code: "Backspace",
-      eng: ["Backspace ⟵", "Backspace ⟵"],
-      ru: ["Backspace ⟵", "Backspace ⟵"],
+      eng: ["Backspace", "Backspace"],
+      ru: ["Backspace", "Backspace"],
+      styleClass: "style1",
     },
   ],
 
@@ -77,6 +78,7 @@ const keysArr = [
       code: "Tab",
       eng: ["Tab ↹", "Tab ↹"],
       ru: ["Tab ↹", "Tab ↹"],
+      styleClass: "style1",
     },
     {
       code: "KeyQ",
@@ -142,6 +144,7 @@ const keysArr = [
       code: "Backslash",
       eng: ["\\", "|"],
       ru: ["\\", "/"],
+      styleClass: "style1",
     },
   ],
 
@@ -150,6 +153,7 @@ const keysArr = [
       code: "CapsLock",
       eng: ["Caps Lock", "Caps Lock"],
       ru: ["Caps Lock", "Caps Lock"],
+      styleClass: "style2",
     },
     {
       code: "KeyA",
@@ -210,6 +214,7 @@ const keysArr = [
       code: "Enter",
       eng: ["Enter ↵", "Enter ↵"],
       ru: ["Enter ↵", "Enter ↵"],
+      styleClass: "style3",
     },
   ],
 
@@ -218,6 +223,7 @@ const keysArr = [
       code: "ShiftLeft",
       eng: ["Shift ⇧", "Shift ⇧"],
       ru: ["Shift ⇧", "Shift ⇧"],
+      styleClass: "style4",
     },
     {
       code: "KeyZ",
@@ -278,6 +284,7 @@ const keysArr = [
       code: "ShiftRight",
       eng: ["Shift ⇧", "Shift ⇧"],
       ru: ["Shift ⇧", "Shift ⇧"],
+      styleClass: "style4",
     },
   ],
 
@@ -301,6 +308,7 @@ const keysArr = [
       code: "Space",
       eng: [" ", " "],
       ru: [" ", " "],
+      styleClass: "style5",
     },
     {
       code: "AltRight",
