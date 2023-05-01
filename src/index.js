@@ -23,6 +23,8 @@ function createKeyboard() {
       element.className = item.styleClass
         ? `keyboard__item ${item.styleClass}`
         : "keyboard__item";
+      element.setAttribute("data-code", item.code);
+      element.setAttribute("data-printable", item.printable);
       element.innerHTML = item.eng[0];
       line.append(element);
     });
@@ -31,3 +33,34 @@ function createKeyboard() {
 
 createMarkup();
 createKeyboard();
+
+const keyboard = document.querySelector(".keyboard");
+const textarea = document.querySelector("#entry-field__input");
+
+keyboard.addEventListener("click", (e) => {
+  if (e.target.classList.contains("keyboard__item")) {
+    if (e.target.dataset.printable === "true") {
+      textarea.textContent = textarea.textContent + e.target.innerText;
+    }
+  }
+});
+
+const getKeyCode = document.querySelectorAll("[data-code]");
+document.addEventListener("keydown", (e) => {
+  getKeyCode.forEach((el) => {
+    if (e.code === el.dataset.code) {
+      el.classList.add("keydown");
+      if (el.dataset.printable === "true") {
+        textarea.textContent = textarea.textContent + e.key;
+      }
+    }
+  });
+});
+
+document.addEventListener("keyup", (e) => {
+  getKeyCode.forEach((el) => {
+    if (e.code === el.dataset.code) {
+      el.classList.remove("keydown");
+    }
+  });
+});

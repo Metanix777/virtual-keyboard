@@ -50,6 +50,8 @@ body {
           align-items: center;
   height: 50px;
   width: 50px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .keyboard__item.style1 {
@@ -70,5 +72,19 @@ body {
 
 .keyboard__item.style5 {
   width: 290px;
+}
+
+.keyboard__item:hover {
+  background: #5ab1b4;
+}
+
+.keyboard__item.keydown, .keyboard__item:active {
+  font-size: 1.2rem;
+  background: #5ab1b4;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 5px #555555;
+          box-shadow: 1px 1px 5px #555555;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 /*# sourceMappingURL=style.css.map */

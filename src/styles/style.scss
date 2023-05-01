@@ -27,6 +27,7 @@ body {
         align-items: center;
         height: 50px;
         width: 50px;
+        transition: all 0.2s;
 
         &.style1 {
             width: 80px;
@@ -46,6 +47,19 @@ body {
 
         &.style5 {
             width: 290px;
+        }
+
+        &:hover {
+            background: #5ab1b4;
+        }
+
+        &.keydown, 
+        &:active {
+            font-size: 1.2rem;
+            background: #5ab1b4;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px #555555;
+            transition: all 0.2s;
         }
     }
 
