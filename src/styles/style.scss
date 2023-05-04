@@ -1,0 +1,66 @@
+body {
+    background: #2577a7;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__line {
+       display: flex;
+       gap: 10px;
+    }
+    
+    &__item {
+        background: #2e96d3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        transition: all 0.2s;
+
+        &.style1 {
+            width: 80px;
+        }
+
+        &.style2 {
+            width: 100px;
+        }
+
+        &.style3 {
+            width: 120px;
+        }
+
+        &.style4 {
+            width: 130px;
+        }
+
+        &.style5 {
+            width: 290px;
+        }
+
+        &:hover {
+            background: #5ab1b4;
+        }
+
+        &.keydown, 
+        &:active {
+            font-size: 1.2rem;
+            background: #5ab1b4;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px #555555;
+            transition: all 0.2s;
+        }
+    }
+
+}

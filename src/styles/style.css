@@ -1,0 +1,90 @@
+body {
+  background: #2577a7;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+.keyboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.keyboard__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.keyboard__item {
+  background: #2e96d3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 50px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.keyboard__item.style1 {
+  width: 80px;
+}
+
+.keyboard__item.style2 {
+  width: 100px;
+}
+
+.keyboard__item.style3 {
+  width: 120px;
+}
+
+.keyboard__item.style4 {
+  width: 130px;
+}
+
+.keyboard__item.style5 {
+  width: 290px;
+}
+
+.keyboard__item:hover {
+  background: #5ab1b4;
+}
+
+.keyboard__item.keydown, .keyboard__item:active {
+  font-size: 1.2rem;
+  background: #5ab1b4;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 5px #555555;
+          box-shadow: 1px 1px 5px #555555;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/*# sourceMappingURL=style.css.map */
